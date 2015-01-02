@@ -1,3 +1,6 @@
+var settings={
+	opts : 5
+}
 var review=[];
 var testNum=[];
 var root=[

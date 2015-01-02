@@ -12,7 +12,9 @@
 	<script type="text/javascript" src="./javascripts/jquery.js"></script>
 	<script type="text/javascript" src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="./javascripts/var.js"></script>
-	<script type="text/javascript" defer="defer" src="./javascripts/main.js"></script>
+	<script type="text/javascript" defer="defer" src="./javascripts/refresh.js"></script>
+	<script type="text/javascript" defer="defer" src="./javascripts/searchMatch.js"></script>
+	<script type="text/javascript" defer="defer" src="./javascripts/test.js"></script>
 	<title>Root and Affix School</title>
 </head>
 <body>
@@ -36,7 +38,18 @@
 		<h1>Concept</h1>
 	</div>
 	<div data-role="content">
-		英语单词构成有其规律，很好的掌握了构词规律，才可以很好、很快的、准确的记忆单词。英语单词构词法的核心部分，在于词根，词的意义主要是由组成单词的词根体现出来的。词根可以单独构成词，也可以彼此组合成词，通过前缀后缀来改变单词的词性和意义。（词根和词缀叫构词语素）也就是说，单词一般由三部分组成：词根、前缀和后缀。词根决定单词意思，前缀改变单词词义，后缀决定单词词性。
+		<p>英语单词构成有其规律，很好的掌握了构词规律，才可以很好、很快的、准确的记忆单词。英语单词构词法的核心部分，在于词根，词的意义主要是由组成单词的词根体现出来的。词根可以单独构成词，也可以彼此组合成词，通过前缀后缀来改变单词的词性和意义。（词根和词缀叫构词语素）也就是说，单词一般由两部分组成：词根、词缀（前缀和后缀）。词根决定单词意思，前缀改变单词词义，后缀决定单词词性。</p><br/>
+		<span id="word-building" name="word-building">构词法</span><br/>
+		<p>一般读者对我国汉字的构造法都有所了解。汉字属于拼形文字。英语科技术语的构词法也有类似的道理。所不同的在于：它们是拼音文字，不是由偏旁构成的，而是由若干个（通常是一，两个或三，四个词素（word elements）构成的。所谓―词素‖，是指构成一个词的各个基本组成单位，它是由若干个音节构成的。各个词素都有其语言上一定的来源。</p><br/>
+		<span id="affix" name="affix">词缀</span><br/>
+		<p>只能粘附在词根上构成新词的语素，它本身不能单独构成词。粘附在词根前面的词缀称为前缀，粘附在词根后面的词缀称为后缀，插入词根中间的词缀称为中缀。</p><br/>
+		<span id="prefix" name="prefix">前缀</span><br/>
+		<p>所谓前缀，顾名思义是一个词素。它被用于接到一个词的前面，使这个词的意义发生变化。科技英语里的前缀，大多数是来自希腊语及拉丁语的介词及副词，以及少数形容词。</p><br/>
+		<span id="suffix" name="suffix">后缀</span><br/>
+		<p>后缀是一个词素，它是用于接到一个词的后面，使这个词起变格的作用，或起词性变化的作用。后缀是一种重要的构词法，通过后缀我们常常可以判断出一个词的词性。</p><br/>
+		<span id="origin" name="origin">词源</span><br/>
+		<p>进行词源分析时，要考虑英语发展的大背景。由于历史的原因，英语的词汇由两部分组成：一是当的口语spoken English，由于德国和法国历史上一度侵占过英伦三岛，其语言对当地的英语口语影响也是很大的；二是外来词：英语从古拉丁语和古希腊语吸取了大量的科技词汇，形成了书面语言written English。所以英语是一种混合性语言。英语的口语词汇的研究应侧重其发音的规则，英语的书面语立研究应侧重其构词法。但二者都有产生和发展的过程。有单词经过长时间的演变与发展，与其词源在形式上已经有所变化，在研究时，就要用心去思索，与人们的社会生活和实践紧密地结合起来，找出其内在联系和内涵变化。</p><br/>
+
 	</div>
 	<div data-role="footer" data-position="fixed"></div>
 </div>
@@ -72,14 +85,6 @@
 	</div>
 	<div data-role="footer" data-position="fixed"></div>
 </div>
-<div data-role="page" data-theme="b" id="Settings">
-	<div data-role="header" data-position="fixed">
-		<a href="#home" data-role="button" data-icon="back">back</a>
-		<h1>Settings</h1>
-	</div>
-	<div data-role="content"></div>
-	<div data-role="footer" data-position="fixed"></div>
-</div>
 <div data-role="dialog" data-theme="b" id="Test">
 	<div data-role="header" data-position="fixed">
 		<a href="#Catalogue" data-role="button" data-icon="back">back</a>
@@ -90,5 +95,32 @@
 	</div>
 	<div data-role="footer" data-position="fixed"></div>
 </div>
+<div data-role="page" data-theme="b" id="Settings">
+	<div data-role="header" data-position="fixed">
+		<a href="#home" data-role="button" data-icon="back">back</a>
+		<h1>Settings</h1>
+	</div>
+	<div data-role="content">
+		<a href="#Options" data-role="button" data-icon="arrow-r" data-iconpos="right">Options</a>
+		<a href="" data-role="button" data-icon="info" data-iconpos="right">Clean History</a>
+		<a href="" data-role="button" data-icon="alert" data-iconpos="right">Restore Settings</a>
+	</div>
+	<div data-role="footer" data-position="fixed"></div>
+</div>
+	<div data-role="page" data-theme="b" id="Options">
+		<div data-role="header" data-position="fixed">
+			<a href="" data-role="button" data-icon="back" data-rel="back">back</a>
+			<h1>Options</h1>
+		</div>
+		<div data-role="content">
+			<input type="radio" name="opts" value="1" />1
+			<input type="radio" name="opts" value="2" />2
+			<input type="radio" name="opts" value="3" />3
+			<input type="radio" name="opts" value="4" />4
+			<input type="radio" name="opts" value="5" />5
+
+		</div>
+		<div data-role="footer" data-position="fixed"></div>
+	</div>
 </body>
 </html>
