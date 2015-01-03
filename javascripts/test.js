@@ -10,23 +10,19 @@ function whichTest(test,yes) {
 					if (affix_meanings[i][j]==affix_meanings[i][optsLength]) {
 						x--;
 					} else{
-						$("#testAera").append("<a href=\"\" data-role=\"button\">"+affix_meanings[i][optsLength]+"</a>");	
+						$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</a>");	
 					};
 				};
-					$("#testAera").append("<a href=\"\" data-role=\"button\">"+affix_meanings[i][j]+"</a>");
-				for (var x = 0; x < settings.opts-opts ; x++) {
+					$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][j]+"</a>");
+				for (var x = 0; x < settings.opts-1-opts ; x++) {
 					var optsLength = getOptsLength(i);
 					if (affix_meanings[i][j]==affix_meanings[i][optsLength]) {
 						x--;
 					} else{
-						$("#testAera").append("<a href=\"\" data-role=\"button\">"+affix_meanings[i][optsLength]+"</a>");	
+						$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</a>");	
 					};
 				};
-				if(yes){
-					continue;
-				}else{
-					break total;
-				};
+				break total;
 			};
 		};
 		}
@@ -39,28 +35,25 @@ function whichTest(test,yes) {
 				if (affix_meanings[test-1][i]==affix_meanings[test-1][optsLength]) {
 					x--;
 				} else{
-					$("#testAera").append("<a href=\"\" data-role=\"button\">"+affix_meanings[test-1][optsLength]+"</a>");	
+					$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</a>");	
 				};
 			};
-				$("#testAera").append("<a href=\"\" data-role=\"button\">"+affix_meanings[test-1][i]+"</a>");
-			for (var x = 0; x < settings.opts-opts ; x++) {
+				$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][i]+"</a>");
+			for (var x = 0; x < settings.opts-1-opts ; x++) {
 				var optsLength = getOptsLength(i);
 				if (affix_meanings[test-1][i]==affix_meanings[i][optsLength]) {
 					x--;
 				} else{
-					$("#testAera").append("<a href=\"\" data-role=\"button\">"+affix_meanings[test-1][optsLength]+"</a>");	
+					$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</a>");	
 				};
 			};
-			if(yes){
-				continue;
-			}else{
-				break;
-			};
+			break;
 		};
 	};
 }
 function getOpts(num) {
-	var opts = Math.floor(Math.random()*num);
+	var opts = Math.floor(Math.random()*(num-1));
+	alert(opts)
 	return opts;
 }
 function getOptsLength(i) {
@@ -77,7 +70,10 @@ function test() {
 		whichTest(test,yes);
 	});
 }
-
+function isAnswer(thisBtn) {
+	// thisBtn.css("transparent-color","transparent");
+	alert("a");
+}
 $(function() {
 	test();
 });
