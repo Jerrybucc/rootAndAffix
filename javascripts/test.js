@@ -61,7 +61,6 @@ function whichTest(test,yes) {
 }
 function getOpts(num) {
 	var opts = Math.floor(Math.random()*num);
-	alert(opts)
 	return opts;
 }
 function getOptsLength(i) {
