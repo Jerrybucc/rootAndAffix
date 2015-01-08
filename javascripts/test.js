@@ -10,16 +10,19 @@ function whichTest(test,yes) {
 					if (affix_meanings[i][j]==affix_meanings[i][optsLength]) {
 						x--;
 					} else{
-						$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</a>");	
+						$("#testAera").append("<button href=\"\" class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</button>");	
+						alert("1")
 					};
 				};
-					$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][j]+"</a>");
+					$("#testAera").append("<button href=\"\" class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][j]+"</button>");
+					alert("2")
 				for (var x = 0; x < settings.opts-1-opts ; x++) {
 					var optsLength = getOptsLength(i);
 					if (affix_meanings[i][j]==affix_meanings[i][optsLength]) {
 						x--;
 					} else{
-						$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</a>");	
+						$("#testAera").append("<button href=\"\" class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</button>");	
+						alert("3")
 					};
 				};
 				break total;
@@ -35,25 +38,27 @@ function whichTest(test,yes) {
 				if (affix_meanings[test-1][i]==affix_meanings[test-1][optsLength]) {
 					x--;
 				} else{
-					$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</a>");	
+					$("#testAera").append("<button href=\"\" class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</button>");	
 				};
 			};
-				$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][i]+"</a>");
+				$("#testAera").append("<button href=\"\" class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][i]+"</button>");
 			for (var x = 0; x < settings.opts-1-opts ; x++) {
 				var optsLength = getOptsLength(i);
 				if (affix_meanings[test-1][i]==affix_meanings[i][optsLength]) {
 					x--;
 				} else{
-					$("#testAera").append("<a href=\"\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</a>");	
+					$("#testAera").append("<button href=\"\" class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</button>");	
 				};
 			};
 			break;
 		};
 	};
+
+		$("button").buttonMarkup("refresh");
+
 }
 function getOpts(num) {
-	var opts = Math.floor(Math.random()*(num-1));
-	alert(opts)
+	var opts = Math.floor(Math.random()*(num-1))
 	return opts;
 }
 function getOptsLength(i) {
@@ -72,7 +77,6 @@ function test() {
 }
 function isAnswer(thisBtn) {
 	// thisBtn.css("transparent-color","transparent");
-	alert("a");
 }
 $(function() {
 	test();
