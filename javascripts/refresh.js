@@ -8,6 +8,7 @@ function Rcata(results,cata,reviewAera) {
 		};	
 		cata.innerHTML+=("<a href=\"\" data-role=\"button\">Test&nbsp;"+(i+1)+"</a><br/>");
 	};
+	$("a").buttonMarkup("refresh");
 }
 function Rhistory(results,cata,reviewAera) {
 	$("#reviewAera").empty();
@@ -18,6 +19,7 @@ function Rhistory(results,cata,reviewAera) {
 			reviewAera.innerHTML+=(review[i]+"<br/>");
 		};
 	};
+	$("a").buttonMarkup("refresh");
 }
 function refresh() {
 	var results = document.getElementById("results");

@@ -10,16 +10,16 @@ function whichTest(test,yes) {
 					if (affix_meanings[i][j]==affix_meanings[i][optsLength]) {
 						x--;
 					} else{
-						$("#testAera").append("<button class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</button>");
+						$("#testAera").append("<a class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</a>");
 					};
 				};
-					$("#testAera").append("<button class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][j]+"</button>");
+					$("#testAera").append("<a class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][j]+"</a>");
 				for (var x = 0; x < settings.opts-1-opts ; x++) {
 					var optsLength = getOptsLength(i);
 					if (affix_meanings[i][j]==affix_meanings[i][optsLength]) {
 						x--;
 					} else{
-						$("#testAera").append("<button class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</button>");	
+						$("#testAera").append("<a class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[i][optsLength]+"</a>");	
 					};
 				};
 				break total;
@@ -35,23 +35,23 @@ function whichTest(test,yes) {
 				if (affix_meanings[test-1][i]==affix_meanings[test-1][optsLength]) {
 					x--;
 				} else{
-					$("#testAera").append("<button class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</button>");	
+					$("#testAera").append("<a class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</a>");	
 				};
 			};
-				$("#testAera").append("<button class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][i]+"</button>");
+				$("#testAera").append("<a class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][i]+"</a>");
 			for (var x = 0; x < settings.opts-1-opts ; x++) {
 				var optsLength = getOptsLength(i);
 				if (affix_meanings[test-1][i]==affix_meanings[i][optsLength]) {
 					x--;
 				} else{
-					$("#testAera").append("<button class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</button>");	
+					$("#testAera").append("<a class=\"opts\" data-role=\"button\" onlick=\"isAnswer($(this));\">"+affix_meanings[test-1][optsLength]+"</a>");	
 				};
 			};
 			break;
 		};
 	};
 
-		$("button").buttonMarkup("refresh");
+	$("a").buttonMarkup("refresh");
 
 }
 function getOpts(num) {

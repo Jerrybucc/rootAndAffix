@@ -15,6 +15,7 @@
 	<script type="text/javascript" defer="defer" src="./javascripts/refresh.js"></script>
 	<script type="text/javascript" defer="defer" src="./javascripts/searchMatch.js"></script>
 	<script type="text/javascript" defer="defer" src="./javascripts/test.js"></script>
+	<script type="text/javascript" defer="defer" src="./javascripts/settings.js"></script>
 	<title>Root and Affix School</title>
 </head>
 <body>
@@ -102,25 +103,35 @@
 	</div>
 	<div data-role="content">
 		<a href="#Options" data-role="button" data-icon="arrow-r" data-iconpos="right">Options</a>
-		<a href="" data-role="button" data-icon="info" data-iconpos="right">Clean History</a>
+		<a id="removeHis" data-role="button" data-icon="info" data-iconpos="right">Clean History</a>
 		<a href="" data-role="button" data-icon="alert" data-iconpos="right">Restore Settings</a>
 	</div>
 	<div data-role="footer" data-position="fixed"></div>
 </div>
-	<div data-role="page" data-theme="b" id="Options">
-		<div data-role="header" data-position="fixed">
-			<a href="" data-role="button" data-icon="back" data-rel="back">back</a>
-			<h1>Options</h1>
-		</div>
-		<div data-role="content">
-			<input type="radio" name="opts" value="1" />1
-			<input type="radio" name="opts" value="2" />2
-			<input type="radio" name="opts" value="3" />3
-			<input type="radio" name="opts" value="4" />4
-			<input type="radio" name="opts" value="5" />5
-
-		</div>
-		<div data-role="footer" data-position="fixed"></div>
+<div data-role="page" data-theme="b" id="Options">
+	<div data-role="header" data-position="fixed">
+		<a href="" data-role="button" data-icon="back" data-rel="back">back</a>
+		<h1>Options</h1>
 	</div>
+	<div data-role="content">
+		<input type="radio" name="opts" value="1" />1
+		<input type="radio" name="opts" value="2" />2
+		<input type="radio" name="opts" value="3" />3
+		<input type="radio" name="opts" value="4" />4
+		<input type="radio" name="opts" value="5" />5
+
+	</div>
+	<div data-role="footer" data-position="fixed"></div>
+</div>
+<div data-role="dialog" data-theme="b" id="Hint-his">
+	<div data-role="header" data-position="fixed">
+		<h1>Clean History</h1>
+	</div>
+	<div data-role="content">
+	<p>History has been cleaned!</p>
+	<a class="ui-inline" data-role="button" data-rel="back">Confirm</a>
+	</div>
+	<div data-role="footer" data-position="fixed"></div>
+</div>
 </body>
 </html>
