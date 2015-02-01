@@ -1,12 +1,12 @@
 function Rcata(results,cata,reviewAera) {
 	$("#cata").empty();
-	cata.innerHTML="<a href=\"\" data-role=\"button\">Total&nbsp;Test"+"</a><br/>";
+	// cata.innerHTML="<a href=\"\" data-role=\"button\">Total&nbsp;Test"+"</a><br/>";
 	for (var i =0; i < affix.length; i++) {
 		cata.innerHTML+=("<h1>Class&nbsp;"+(i+1)+"</h1><br/>");
 		for (var j =0; j < affix[i].length; j++) {
 			this.cata.innerHTML+=("<span>\""+affix[i][j]+"\""+"&nbsp;—————&nbsp;"+affix_meanings[i][j]+"</span><br/>");
 		};	
-		cata.innerHTML+=("<a href=\"\" data-role=\"button\">Test&nbsp;"+(i+1)+"</a><br/>");
+		// cata.innerHTML+=("<a href=\"\" data-role=\"button\">Test&nbsp;"+(i+1)+"</a><br/>");
 	};
 	$("a").buttonMarkup("refresh");
 }

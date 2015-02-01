@@ -104,7 +104,7 @@
 	<div data-role="content">
 		<a href="#Options" data-role="button" data-icon="arrow-r" data-iconpos="right">Options</a>
 		<a id="removeHis" data-role="button" data-icon="info" data-iconpos="right">Clean History</a>
-		<a href="" data-role="button" data-icon="alert" data-iconpos="right">Restore Settings</a>
+		<a href="#Hint-Res" data-role="button" data-icon="alert" data-iconpos="right">Restore Settings</a>
 	</div>
 	<div data-role="footer" data-position="fixed"></div>
 </div>
@@ -128,10 +128,18 @@
 		<h1>Clean History</h1>
 	</div>
 	<div data-role="content">
-	<p>History has been cleaned!</p>
+	<p class="center">History has been cleaned!</p>
 	<a class="ui-inline" data-role="button" data-rel="back">Confirm</a>
 	</div>
-	<div data-role="footer" data-position="fixed"></div>
+</div>
+<div data-role="dialog" data-theme="b" id="Hint-Res">
+	<div data-role="header" data-position="fixed">
+		<h1>Restore Settings</h1>
+	</div>
+	<div data-role="content">
+	<p class="center">Setting has been cleaned!</p>
+	<a class="ui-inline" data-role="button" data-rel="back">Confirm</a>
+	</div>
 </div>
 </body>
 </html>
