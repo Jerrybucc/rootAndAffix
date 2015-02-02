@@ -10,8 +10,10 @@ CACHE:
 ../javascripts/jquery.js
 ../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js
 ../javascripts/var.js
-
 ../javascripts/refresh.js
 ../javascripts/searchMatch.js
 ../javascripts/settings.js
 ../javascripts/test.js
+
+NETWORK:
+*
